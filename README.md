@@ -1,2 +1,2 @@
 # MCL
-Where i post my discoveries on Claude
+Where I post my discoveries on Claude

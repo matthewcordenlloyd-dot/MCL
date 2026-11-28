@@ -22,3 +22,7 @@ Then open http://localhost:5173 in Chrome or Edge.
 ## Security
 
 This repo contains no passwords, API keys or tokens. Optional keys (like a MapTiler key for sharper satellite imagery) go in a local `.env.local` file, which `.gitignore` keeps out of the repo. See [SECURITY.md](SECURITY.md).
+
+## License
+
+MIT. See [LICENSE](LICENSE).

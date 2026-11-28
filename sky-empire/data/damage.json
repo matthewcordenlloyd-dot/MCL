@@ -1,0 +1,29 @@
+{
+  "_doc": "M8 damage and crashes (A320-family limits). Costs in USD; hullLossShare is a share of the aircraft's value. Insurance pays insuredShare of hull losses.",
+  "limits": {
+    "hardLandingFpm": -600,
+    "crashFpm": -1100,
+    "tailStrikePitchDeg": 11.5,
+    "wingStrikeBankDeg": 8,
+    "wingCrashBankDeg": 22,
+    "excursionKt": 50,
+    "excursionOffM": 60,
+    "vmoKt": 350,
+    "overspeedSeconds": 4,
+    "flapLimitsKt": [999, 230, 215, 195, 181, 177],
+    "gearLimitKt": 280,
+    "limitSeconds": 3
+  },
+  "costs": {
+    "hardLanding": 350000,
+    "tailStrike": 1200000,
+    "wingStrike": 800000,
+    "overspeed": 500000,
+    "flaps": 300000,
+    "gearDoors": 250000,
+    "hullLossShare": 1
+  },
+  "insuredShare": 0.8,
+  "reputation": { "damage": -2, "crash": -25 },
+  "outOfServiceDays": { "damage": 3, "crash": 120 }
+}

@@ -1,0 +1,37 @@
+# --- Secrets: never commit these ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials*.json
+secrets*.json
+service-account*.json
+
+# --- Local / machine-specific ---
+.claude/settings.local.json
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Dependencies and build output ---
+node_modules/
+dist/
+build/
+.vite/
+__pycache__/
+*.pyc
+
+# --- Blender backups ---
+*.blend1
+*.blend2
+
+# --- Logs ---
+*.log
+npm-debug.log*

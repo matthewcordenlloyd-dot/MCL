@@ -1,0 +1,227 @@
+{
+  "icao": "EGLL",
+  "iata": "LHR",
+  "name": "London Heathrow",
+  "arp": {
+    "lat": 51.4706,
+    "lon": -0.461941,
+    "elevationM": 25
+  },
+  "frame": "Local ENU metres from the ARP: x = east, z = south (three.js), y = up. Converted with src/core/geo.ts.",
+  "note": "M1 layout: southern runway 09R/27L, one Heathrow-inspired terminal block with apron and taxiways. Positions are approximate and will be cross-checked against OurAirports runways.csv in M3.",
+  "runways": [
+    {
+      "id": "09R/27L",
+      "ends": [
+        "09R",
+        "27L"
+      ],
+      "center": [
+        398,
+        634
+      ],
+      "headingTrueDeg": 89.7,
+      "lengthM": 3660,
+      "widthM": 50,
+      "shoulderM": 7.5,
+      "surface": "asphalt"
+    }
+  ],
+  "taxiways": [
+    {
+      "id": "A",
+      "from": [
+        -1500,
+        470
+      ],
+      "to": [
+        2300,
+        470
+      ],
+      "widthM": 23
+    },
+    {
+      "id": "A1",
+      "from": [
+        -1500,
+        470
+      ],
+      "to": [
+        -1500,
+        609
+      ],
+      "widthM": 23
+    },
+    {
+      "id": "A5",
+      "from": [
+        2230,
+        470
+      ],
+      "to": [
+        2230,
+        609
+      ],
+      "widthM": 23
+    },
+    {
+      "id": "L",
+      "from": [
+        -900,
+        60
+      ],
+      "to": [
+        -900,
+        470
+      ],
+      "widthM": 25
+    }
+  ],
+  "apron": {
+    "min": [
+      -1080,
+      -140
+    ],
+    "max": [
+      -720,
+      60
+    ]
+  },
+  "terminal": {
+    "id": "T-west",
+    "model": "models/egll_terminal.glb",
+    "lightmap": "models/egll_terminal_lm.png",
+    "center": [
+      -900,
+      -170
+    ],
+    "rotationDeg": 0,
+    "sizeM": [
+      300,
+      60,
+      20
+    ],
+    "note": "Heathrow-inspired original design: long glazed hall with a wave roof, airside facade faces south toward the apron.",
+    "lightmapScale": 2
+  },
+  "stands": [
+    {
+      "id": "501",
+      "nose": [
+        -1020,
+        -126
+      ],
+      "headingDeg": 0
+    },
+    {
+      "id": "502",
+      "nose": [
+        -960,
+        -126
+      ],
+      "headingDeg": 0
+    },
+    {
+      "id": "503",
+      "nose": [
+        -900,
+        -126
+      ],
+      "headingDeg": 0
+    },
+    {
+      "id": "504",
+      "nose": [
+        -840,
+        -126
+      ],
+      "headingDeg": 0
+    },
+    {
+      "id": "505",
+      "nose": [
+        -780,
+        -126
+      ],
+      "headingDeg": 0
+    }
+  ],
+  "landside": {
+    "roadZ": -222,
+    "roadWidthM": 18,
+    "carParkMin": [
+      -1050,
+      -300
+    ],
+    "carParkMax": [
+      -750,
+      -240
+    ]
+  },
+  "spawnPoints": {
+    "apron": {
+      "pos": [
+        -918,
+        0,
+        -86
+      ],
+      "yawDeg": 15,
+      "label": "Apron, stand 503"
+    },
+    "terminal": {
+      "pos": [
+        -900,
+        0,
+        -175
+      ],
+      "yawDeg": 180,
+      "label": "Terminal hall"
+    },
+    "landside": {
+      "pos": [
+        -900,
+        0,
+        -212
+      ],
+      "yawDeg": 0,
+      "label": "Landside forecourt"
+    },
+    "runway": {
+      "pos": [
+        -1420,
+        0,
+        634
+      ],
+      "yawDeg": 90,
+      "label": "Runway 09R threshold"
+    }
+  },
+  "bakeSun": {
+    "azimuthDeg": 200,
+    "elevationDeg": 42,
+    "strength": 3.5,
+    "skyStrength": 0.9,
+    "note": "Sun used for the lightmap bake; the game uses the same direction for its real-time sun in M1 (time of day comes in M8)."
+  },
+  "frameRotationDeg": 0,
+  "playerStand": "503",
+  "reservedStands": [
+    "501",
+    "503"
+  ],
+  "jetBridgeRotunda": [
+    -900,
+    -134
+  ],
+  "mask": {
+    "min": [
+      -2700,
+      -1700
+    ],
+    "max": [
+      3000,
+      1500
+    ],
+    "blendM": 500
+  }
+}

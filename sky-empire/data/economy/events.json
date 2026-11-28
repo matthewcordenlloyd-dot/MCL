@@ -1,0 +1,16 @@
+{
+  "_doc": "Random events. ratePerYear is the average number per year (most months stay quiet, as in real life). Effects: delayProb (added chance of delay), cancelShare (share of affected flights cancelled), demandMult, fuelMult (one-off jump), reputation (one-off change), scope: base | europe | all | region.",
+  "events": [
+    { "id": "weather_base", "ratePerYear": 6, "days": 1, "scope": "base", "delayProb": 0.35, "cancelShare": 0.06, "level": "warn", "text": "Storms at {base}: heavy delays and some cancellations today." },
+    { "id": "fog_base", "ratePerYear": 4, "days": 1, "scope": "base", "delayProb": 0.25, "cancelShare": 0.03, "level": "warn", "text": "Thick fog at {base}: low-visibility procedures slow departures." },
+    { "id": "atc_strike", "ratePerYear": 1.5, "days": 2, "scope": "europe", "delayProb": 0.3, "cancelShare": 0.2, "level": "bad", "text": "Air traffic control strike in Europe: flights cancelled for two days." },
+    { "id": "fuel_spike", "ratePerYear": 0.7, "days": 0, "scope": "all", "fuelMult": 1.25, "level": "bad", "text": "Oil markets jump: jet fuel up 25% overnight." },
+    { "id": "fuel_drop", "ratePerYear": 0.6, "days": 0, "scope": "all", "fuelMult": 0.85, "level": "good", "text": "Oil prices slide: jet fuel 15% cheaper." },
+    { "id": "downturn", "ratePerYear": 0.25, "days": 120, "scope": "all", "demandMult": 0.9, "level": "bad", "text": "Economic downturn: travel demand down 10% for the coming months." },
+    { "id": "tourism_boom", "ratePerYear": 0.6, "days": 90, "scope": "region", "demandMult": 1.15, "level": "good", "text": "Tourism boom in {region}: demand up 15% there for three months." },
+    { "id": "award", "ratePerYear": 0.6, "days": 0, "scope": "all", "reputation": 5, "minReputation": 62, "level": "good", "text": "{airline} wins a passenger-choice award." },
+    { "id": "pr_crisis", "ratePerYear": 0.5, "days": 0, "scope": "all", "reputation": -6, "level": "bad", "text": "A viral passenger video hurts {airline}'s reputation." },
+    { "id": "it_outage", "ratePerYear": 0.3, "days": 1, "scope": "all", "delayProb": 0.4, "cancelShare": 0.25, "level": "bad", "text": "IT outage: check-in and crew systems down for a day." },
+    { "id": "volcanic_ash", "ratePerYear": 0.05, "days": 3, "scope": "europe", "delayProb": 0.5, "cancelShare": 0.7, "level": "bad", "text": "Volcanic ash cloud closes much of European airspace." }
+  ]
+}

@@ -1,0 +1,33 @@
+# IDEAS (parking lot for M9+)
+
+- Photo mode with depth of field and livery showcase shots
+- Replay system for landings (ghost camera, landing rate score)
+- ATC radio chatter (speech synthesis) with your call sign
+- Historic scenario mode: start in 1970 with period aircraft
+- Ferry-flight missions and aircraft delivery flights from Toulouse/Seattle
+- Airshow events with your VIP fleet
+- Airline magazine generated from your network and reviews
+- Seasonal events (Christmas rush, summer holidays, Hajj, World Cup)
+- Instant "fly this route" from the route map: jump into the cockpit of any live flight
+- Livery sharing: export/import a livery as a file, and a gallery of your past liveries
+- Generate a real 3D model for custom aircraft types from their design (lofted fuselage, scaled A320 parts)
+- Decal library (flags, alliance-style badges, "1000th aircraft" stickers) for the livery editor
+- Walkable VIP interiors built from the free-layout furniture
+- Character face sliders (jaw, eyes, nose) and more hairstyles once the character mesh is upgraded
+- Bonds and convertible notes; fuel hedging contracts
+- Rivals buying stakes in you, hostile bids against your airline, activist shareholders
+- Slot auctions and buying slots from rivals
+- Multi-leg charter tours (a band's world tour) and charter series for tour operators
+- Cargo commodity flows (flowers, electronics, pharma) with special handling
+- A business-jet 3D model so you can fly your private jet from the cockpit
+- Walkable yacht deck and visits to your overseas properties
+- Car models built in Blender, a road network around the airport and a racetrack on a closed runway
+- Art collection, watches and charity foundations as late-game money sinks
+- Day/night lighting for the HQ and mansion (comes with M8 night)
+- Night lightmap bakes (a second bake with interior lights) to swap in after dusk
+- Icing, wet and contaminated runways with longer stopping distances, lightning flashes
+- ATC radio with AI traffic call-outs and your clearances
+- AI traffic at the other detailed airport (Heathrow) and at generated airports
+- Ground vehicles: baggage tugs, fuel trucks, follow-me cars
+- Read back ATC clearances with a key, and get told off for taking off without clearance
+- STAR/SID procedures and vectors to the ILS after the K skip

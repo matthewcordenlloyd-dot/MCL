@@ -1,0 +1,33 @@
+{
+  "_doc": "Streamed real-world terrain. Elevation: AWS Terrain Tiles (Terrarium encoding, no key). Imagery: EOX Sentinel-2 cloudless (no key) or MapTiler satellite when VITE_MAPTILER_KEY is set in .env.local.",
+  "elevation": {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png",
+    "maxZoom": 12,
+    "attribution": "Elevation: Terrain Tiles (Mapzen / AWS Open Data; SRTM, GMTED, ETOPO1)"
+  },
+  "imagery": {
+    "eox": {
+      "url": "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/g/{z}/{y}/{x}.jpg",
+      "maxZoom": 14,
+      "attribution": "Sentinel-2 cloudless – s2maps.eu by EOX IT Services GmbH (modified Copernicus Sentinel data 2020), CC BY-NC-SA 4.0"
+    },
+    "maptiler": {
+      "url": "https://api.maptiler.com/tiles/satellite-v2/{z}/{x}/{y}.jpg?key={key}",
+      "maxZoom": 16,
+      "attribution": "© MapTiler © OpenStreetMap contributors"
+    }
+  },
+  "minZoom": 8,
+  "maxZoom": 14,
+  "segments": 32,
+  "lodFactor": 1.4,
+  "radiusKm": 70,
+  "maxConcurrentRequests": 8,
+  "cacheTiles": 600,
+  "presetMaxZoom": {
+    "low": 12,
+    "medium": 14,
+    "high": 14,
+    "ultra": 14
+  }
+}

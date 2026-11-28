@@ -1,0 +1,31 @@
+{
+  "_doc": "Rendering environment. Sun direction comes from the airport's bakeSun so baked and real-time light agree.",
+  "toneMapping": "ACES",
+  "exposure": 0.5,
+  "sunIntensity": 9,
+  "sunColor": "#fff1dc",
+  "hemiIntensity": 0,
+  "environmentIntensity": 0.45,
+  "fogColor": "#b9cce0",
+  "fogDensity": 0.000035,
+  "sky": {
+    "turbidity": 4.5,
+    "rayleigh": 1.4,
+    "mieCoefficient": 0.004,
+    "mieDirectionalG": 0.8,
+    "cloudCoverage": 0.35,
+    "cloudDensity": 0.45
+  },
+  "lightmapExposure": 0.8,
+  "player": {
+    "walkSpeed": 1.6,
+    "runSpeed": 5.2,
+    "jumpSpeed": 4.6,
+    "gravity": 9.81,
+    "eyeHeight": 1.68,
+    "capsuleRadius": 0.3,
+    "capsuleHalfHeight": 0.6,
+    "thirdPersonDistance": 3.6
+  },
+  "interiorLightmapExposure": 1.25
+}

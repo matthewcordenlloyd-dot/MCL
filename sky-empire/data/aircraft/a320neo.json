@@ -1,0 +1,495 @@
+{
+  "id": "a320neo",
+  "name": "Airbus A320neo",
+  "manufacturer": "Airbus",
+  "category": "narrowbody",
+  "dimensions": {
+    "length": 37.57,
+    "span": 35.8,
+    "height": 11.76,
+    "fuselageWidth": 3.95,
+    "fuselageHeight": 4.14,
+    "wheelbase": 12.64,
+    "track": 7.59
+  },
+  "model": {
+    "file": "models/a320neo.glb",
+    "noseY": 17.6,
+    "centerlineHeight": 3.9,
+    "cabinFloorBelowCenterline": 0.66,
+    "lodDistances": [
+      0,
+      120,
+      500
+    ],
+    "uv": {
+      "type": "cylindrical",
+      "length": 37.57,
+      "note": "u = s/length (s = metres from nose), v = theta/2pi (theta 0 = belly, pi/2 = right side, pi = crown)"
+    },
+    "profile": {
+      "_doc": "Fuselage shape: nose [s, radius factor, centre offset] and tail [s, radius factor]. Shared by the Blender generators and the runtime collision builder.",
+      "nose": [
+        [
+          0,
+          0.03,
+          -0.62
+        ],
+        [
+          0.15,
+          0.3,
+          -0.58
+        ],
+        [
+          0.4,
+          0.52,
+          -0.5
+        ],
+        [
+          0.8,
+          0.7,
+          -0.4
+        ],
+        [
+          1.3,
+          0.83,
+          -0.3
+        ],
+        [
+          2,
+          0.91,
+          -0.2
+        ],
+        [
+          2.8,
+          0.955,
+          -0.12
+        ],
+        [
+          3.8,
+          0.98,
+          -0.06
+        ],
+        [
+          5,
+          0.995,
+          -0.02
+        ],
+        [
+          6.2,
+          1,
+          0
+        ]
+      ],
+      "tail": [
+        [
+          23.5,
+          1
+        ],
+        [
+          26,
+          0.955
+        ],
+        [
+          28.5,
+          0.865
+        ],
+        [
+          31,
+          0.72
+        ],
+        [
+          33.5,
+          0.53
+        ],
+        [
+          35.5,
+          0.34
+        ],
+        [
+          36.8,
+          0.2
+        ],
+        [
+          37.35,
+          0.12
+        ],
+        [
+          37.57,
+          0.07
+        ]
+      ],
+      "tailCentreRise": 0.92
+    },
+    "interior": {
+      "file": "models/a320neo_interior.glb",
+      "lightmap": "models/a320neo_interior_lm.png",
+      "lightmapScale": 2,
+      "cockpitBulkheadS": 4.6,
+      "aftBulkheadS": 31.8,
+      "forwardGalley": {
+        "s": [
+          4.65,
+          5.6
+        ],
+        "x": [
+          0.5,
+          1.35
+        ]
+      },
+      "aftLavs": {
+        "s": [
+          29.6,
+          30.55
+        ]
+      },
+      "aftGalley": {
+        "s": [
+          30.65,
+          31.75
+        ]
+      }
+    }
+  },
+  "livery": {
+    "windows": {
+      "firstS": 7.4,
+      "pitch": 0.533,
+      "count": 34,
+      "gaps": [
+        [
+          15.55,
+          17.35
+        ]
+      ],
+      "width": 0.23,
+      "height": 0.33,
+      "centerAboveCenterline": 0.32
+    },
+    "overwingExits": [
+      {
+        "s": 15.95,
+        "width": 0.51,
+        "height": 0.96
+      },
+      {
+        "s": 16.95,
+        "width": 0.51,
+        "height": 0.96
+      }
+    ],
+    "doors": [
+      {
+        "id": "1",
+        "s": 5.25,
+        "width": 0.81,
+        "height": 1.85,
+        "sillBelowCenterline": 0.66,
+        "sides": [
+          "L",
+          "R"
+        ]
+      },
+      {
+        "id": "2",
+        "s": 31,
+        "width": 0.81,
+        "height": 1.85,
+        "sillBelowCenterline": 0.66,
+        "sides": [
+          "L",
+          "R"
+        ]
+      }
+    ],
+    "cargoDoors": [
+      {
+        "s": 9.6,
+        "width": 1.82,
+        "height": 1.24,
+        "side": "R"
+      },
+      {
+        "s": 26.2,
+        "width": 1.82,
+        "height": 1.24,
+        "side": "R"
+      }
+    ],
+    "cockpit": {
+      "_doc": "Cockpit window panes on the right side as [s0, s1, theta0, theta1] (theta from the belly); mirrored for the left. Shared by the livery painter and the interior generator.",
+      "panes": [
+        [
+          2.18,
+          2.72,
+          1.82,
+          3.04
+        ],
+        [
+          2.8,
+          3.28,
+          1.78,
+          2.5
+        ],
+        [
+          3.34,
+          3.7,
+          1.82,
+          2.38
+        ]
+      ]
+    }
+  },
+  "performance": {
+    "mtowKg": 79000,
+    "oewKg": 44300,
+    "maxFuelKg": 19000,
+    "wingAreaM2": 122.6,
+    "thrustPerEngineKN": 120.6,
+    "engines": 2,
+    "engineType": "CFM LEAP-1A",
+    "cruiseMach": 0.78,
+    "maxMach": 0.82,
+    "serviceCeilingFt": 39800,
+    "rangeKm": 6300,
+    "takeoffRunwayM": 2100,
+    "vrKt": 145,
+    "vrefKt": 135,
+    "stallCleanKt": 140,
+    "stallLandingKt": 105,
+    "fuelBurnKgPerHour": 2100
+  },
+  "cabin": {
+    "maxSeats": 194,
+    "typicalTwoClass": 165,
+    "typicalSingleClass": 186,
+    "cabinWidthM": 3.7,
+    "cabinLengthM": 27.5,
+    "layout": {
+      "_doc": "Seat rows for the default single-class cabin (s = metres from the nose). Used by the runtime cabin builder (instanced seats) and the M5 cabin editor.",
+      "firstRowS": 7.35,
+      "pitchM": 0.76,
+      "rows": 30,
+      "exitRows": [
+        12,
+        13
+      ],
+      "exitExtraM": 0.25,
+      "seatsPerSide": 3,
+      "seatWidthM": 0.46,
+      "aisleM": 0.5,
+      "floorBelowCenterline": 0.66
+    }
+  },
+  "economics": {
+    "listPriceUSD": 111000000,
+    "marketPriceUSD": 55000000,
+    "leaseMonthlyUSD": 370000,
+    "maintenancePerFlightHourUSD": 950
+  },
+  "flight": {
+    "_doc": "Flight model coefficients (body axes: x right, y up, z aft; nose = -z). Tuned for believable handling, not certification accuracy.",
+    "massEmptyKg": 44300,
+    "defaultFuelKg": 9000,
+    "defaultPayloadKg": 14000,
+    "inertiaKgM2": {
+      "pitch": 3400000,
+      "yaw": 5800000,
+      "roll": 2400000
+    },
+    "wingAreaM2": 122.6,
+    "spanM": 35.8,
+    "macM": 4.29,
+    "aero": {
+      "CL0": 0.28,
+      "CLalpha": 5.3,
+      "alphaStallDeg": 15,
+      "CLmaxClean": 1.55,
+      "postStallCLDrop": 0.55,
+      "CD0": 0.021,
+      "k": 0.042,
+      "CDgear": 0.018,
+      "CDspoilers": 0.035,
+      "CYbeta": -0.75,
+      "Cm0": 0.02,
+      "CmAlpha": -1.25,
+      "CmQ": -22,
+      "CmElevator": -1.45,
+      "CmFlapPerUnit": -0.06,
+      "ClBeta": -0.09,
+      "ClP": -0.5,
+      "ClR": 0.12,
+      "ClAileron": 0.045,
+      "ClSpoilerRoll": 0.08,
+      "CnBeta": 0.13,
+      "CnR": -0.28,
+      "CnRudder": -0.11,
+      "CnAileronAdverse": -0.008,
+      "elevatorMaxDeg": 25,
+      "aileronMaxDeg": 25,
+      "rudderMaxDeg": 30,
+      "groundEffectFactor": 0.25
+    },
+    "flaps": [
+      {
+        "name": "UP",
+        "dCL": 0,
+        "dCD": 0,
+        "dAlphaStallDeg": 0,
+        "vmaxKt": 350
+      },
+      {
+        "name": "1",
+        "dCL": 0.25,
+        "dCD": 0.01,
+        "dAlphaStallDeg": 1.5,
+        "vmaxKt": 230
+      },
+      {
+        "name": "2",
+        "dCL": 0.45,
+        "dCD": 0.022,
+        "dAlphaStallDeg": 2.5,
+        "vmaxKt": 200
+      },
+      {
+        "name": "3",
+        "dCL": 0.62,
+        "dCD": 0.034,
+        "dAlphaStallDeg": 3,
+        "vmaxKt": 185
+      },
+      {
+        "name": "FULL",
+        "dCL": 0.8,
+        "dCD": 0.058,
+        "dAlphaStallDeg": 3.5,
+        "vmaxKt": 177
+      }
+    ],
+    "engines": {
+      "count": 2,
+      "staticThrustN": 120600,
+      "idleFraction": 0.045,
+      "reverseFraction": 0.32,
+      "spoolSeconds": 3.2,
+      "fuelKgPerSecPerKN": 0.0115,
+      "x": [
+        -5.75,
+        5.75
+      ]
+    },
+    "gear": {
+      "retractSeconds": 10,
+      "points": [
+        {
+          "id": "nose",
+          "pos": [
+            0,
+            0,
+            -12.64
+          ],
+          "k": 650000,
+          "c": 70000,
+          "steer": true,
+          "brake": false
+        },
+        {
+          "id": "mainL",
+          "pos": [
+            -3.8,
+            0,
+            0
+          ],
+          "k": 2400000,
+          "c": 260000,
+          "steer": false,
+          "brake": true
+        },
+        {
+          "id": "mainR",
+          "pos": [
+            3.8,
+            0,
+            0
+          ],
+          "k": 2400000,
+          "c": 260000,
+          "steer": false,
+          "brake": true
+        }
+      ],
+      "rollingFriction": 0.015,
+      "brakeFriction": 0.55,
+      "lateralFriction": 0.75,
+      "nosewheelMaxDegLowSpeed": 70,
+      "nosewheelMaxDegHighSpeed": 6
+    },
+    "structure": {
+      "points": [
+        [
+          0,
+          1.85,
+          -16.8
+        ],
+        [
+          0,
+          1.9,
+          6
+        ],
+        [
+          0,
+          2.94,
+          13.4
+        ],
+        [
+          -17.9,
+          4.2,
+          3.4
+        ],
+        [
+          17.9,
+          4.2,
+          3.4
+        ],
+        [
+          -5.75,
+          0.57,
+          -4.3
+        ],
+        [
+          5.75,
+          0.57,
+          -4.3
+        ]
+      ]
+    },
+    "cockpitEye": [
+      -0.55,
+      4.6,
+      -13.650000000000002
+    ],
+    "arcade": {
+      "maxPitchRateDeg": 9,
+      "maxRollRateDeg": 28,
+      "maxBankDeg": 45,
+      "spoolSeconds": 1.4,
+      "autoCoordinate": true
+    },
+    "normalLaw": {
+      "maxRollRateDeg": 15,
+      "bankHoldLimitDeg": 33,
+      "maxBankDeg": 67,
+      "nzMax": 2.5,
+      "nzMin": -1,
+      "alphaProtDeg": 12.5,
+      "alphaMaxDeg": 14.5
+    },
+    "cgModel": [
+      0,
+      3,
+      -1.6
+    ],
+    "_cgDoc": "Centre of gravity in model coordinates (origin on the ground under the main gear). All flight points below are in model coordinates too."
+  }
+}

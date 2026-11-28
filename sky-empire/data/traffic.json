@@ -1,0 +1,18 @@
+{
+  "_doc": "M8 AI traffic at your base (Gatwick airport frame: x along the runway, z north negative). Taxi routes follow taxiway J (z = -200) and the runway-end connectors.",
+  "maxAircraft": 4,
+  "liveryResolution": 1024,
+  "intervalSeconds": 95,
+  "turnaroundSeconds": 300,
+  "approachKm": 12,
+  "runwayHalfLength": 1658,
+  "touchdownM": 380,
+  "exitX": 1450,
+  "connectorX": 1680,
+  "connectorZ": 30,
+  "taxiwayZ": -200,
+  "apronTaxiX": -400,
+  "despawnTaxiM": 700,
+  "stand": { "id": "101", "x": -520, "taxiZ": -560, "parkZ": -618 },
+  "people": { "count": 18, "activeRadiusM": 260, "drawRadiusM": 90 }
+}

@@ -1,0 +1,7 @@
+{
+  "_doc": "Career start packages (decided in round 1). Cash in GBP; the sim converts to USD at the fallback rate. base = home airport ICAO.",
+  "easy":   { "label": "Easy",   "cashGBP": 100000000, "base": "EGKK", "fleet": [ { "type": "a320neo", "how": "own", "count": 3 } ], "slots": { "EGKK": 10, "EGLL": 4 }, "loanRate": 0.04, "bankruptcy": "bailout" },
+  "normal": { "label": "Normal", "cashGBP": 25000000,  "base": "EGKK", "fleet": [ { "type": "a320neo", "how": "lease", "count": 2 } ], "slots": { "EGKK": 6 }, "loanRate": 0.065, "bankruptcy": "gameover" },
+  "hard":   { "label": "Hard",   "cashGBP": 5000000,   "base": "EGKK", "fleet": [ { "type": "a320neo", "how": "lease", "count": 1 } ], "slots": { "EGKK": 2 }, "loanRate": 0.09, "bankruptcy": "gameover" },
+  "sandbox": { "label": "Sandbox", "cashGBP": 1000000000000, "base": "EGKK", "fleet": [ { "type": "a320neo", "how": "own", "count": 4 } ], "slots": {}, "loanRate": 0.0, "bankruptcy": "none", "noSlotLimits": true }
+}

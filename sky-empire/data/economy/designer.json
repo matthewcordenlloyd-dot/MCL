@@ -1,0 +1,40 @@
+{
+  "_doc": "Custom aircraft designer: part families and how each option changes the base type. Multipliers apply to the family base; stretch steps add seat rows (one step = one fuselage plug).",
+  "families": {
+    "regional": {
+      "label": "Regional jet (4-5 abreast)", "category": "regional",
+      "seats": [12, 88], "fuselageM": 31, "diameterM": 3.0, "spanM": 28, "mtowT": 45, "fuelKgPerHr": 1650, "cruiseKt": 450,
+      "rangeKm": 3800, "runwayM": 1800, "priceUSD": 36000000, "maintPerHrUSD": 640, "turnMin": 35, "cabinCrew": 2,
+      "devUSD": 120000000, "stepM": 1.6, "seatsPerStep": 8, "stepMin": -2, "stepMax": 3
+    },
+    "narrowbody": {
+      "label": "Single-aisle (6 abreast)", "category": "narrowbody",
+      "seats": [12, 156], "fuselageM": 37.6, "diameterM": 3.95, "spanM": 35.8, "mtowT": 79, "fuelKgPerHr": 2100, "cruiseKt": 450,
+      "rangeKm": 6300, "runwayM": 2100, "priceUSD": 55000000, "maintPerHrUSD": 950, "turnMin": 45, "cabinCrew": 4,
+      "devUSD": 250000000, "stepM": 1.6, "seatsPerStep": 12, "stepMin": -3, "stepMax": 4
+    },
+    "widebody": {
+      "label": "Twin-aisle (9 abreast)", "category": "widebody",
+      "seats": [40, 275], "fuselageM": 66.8, "diameterM": 5.96, "spanM": 64.7, "mtowT": 280, "fuelKgPerHr": 5700, "cruiseKt": 488,
+      "rangeKm": 14500, "runwayM": 2750, "priceUSD": 150000000, "maintPerHrUSD": 2350, "turnMin": 90, "cabinCrew": 10,
+      "devUSD": 600000000, "stepM": 2.5, "seatsPerStep": 18, "stepMin": -3, "stepMax": 4
+    }
+  },
+  "stretchPerStep": { "mtow": 0.035, "range": -0.06, "burn": 0.03, "runway": 0.03, "price": 0.04 },
+  "wings": {
+    "small": { "label": "Compact wing", "span": 0.9, "mtow": 0.94, "range": 0.85, "runway": 1.08, "burn": 0.97, "price": 0.96, "dev": 0.1 },
+    "medium": { "label": "Standard wing", "span": 1.0, "mtow": 1.0, "range": 1.0, "runway": 1.0, "burn": 1.0, "price": 1.0, "dev": 0 },
+    "large": { "label": "High-lift long wing", "span": 1.12, "mtow": 1.08, "range": 1.15, "runway": 0.92, "burn": 1.04, "price": 1.06, "dev": 0.15 }
+  },
+  "engines": {
+    "eco": { "label": "Ultra-efficient geared fan", "burn": 0.9, "cruiseKt": -15, "runway": 1.06, "price": 1.07, "maint": 1.05, "size": 1.12, "dev": 0.15 },
+    "standard": { "label": "Standard turbofan", "burn": 1.0, "cruiseKt": 0, "runway": 1.0, "price": 1.0, "maint": 1.0, "size": 1.0, "dev": 0 },
+    "power": { "label": "High-thrust", "burn": 1.06, "cruiseKt": 15, "runway": 0.9, "price": 1.05, "maint": 1.08, "size": 1.05, "dev": 0.1 }
+  },
+  "fuel": {
+    "standard": { "label": "Standard tanks", "range": 1.0, "mtow": 1.0, "price": 1.0, "dev": 0 },
+    "extended": { "label": "Extra centre tanks", "range": 1.12, "mtow": 1.03, "price": 1.03, "dev": 0.05 }
+  },
+  "leasePerMonthOfPrice": 0.0068,
+  "deliveryMonths": 24
+}

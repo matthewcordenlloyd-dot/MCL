@@ -1,0 +1,26 @@
+{
+  "_doc": "M8 weather and time of day. Weather drifts with game time; economy events at the airport (fog, storms) override it.",
+  "frontHours": 9,
+  "baseWetness": 0.25,
+  "winterWetness": 0.2,
+  "rainCloudThreshold": 0.72,
+  "stormPrecip": 0.75,
+  "windMinKt": 2,
+  "windMaxKt": 26,
+  "prevailingWindDeg": 240,
+  "meanTempC": 27,
+  "seasonalSwingC": 6,
+  "night": {
+    "exposureDay": 0.5,
+    "exposureNight": 1.35,
+    "environmentDay": 0.45,
+    "environmentNight": 0.05,
+    "moonIntensity": 0.35,
+    "moonColor": "#9fb4ff",
+    "fogNight": "#0b1220",
+    "terminalNightLightmap": 0.22,
+    "lightsOnBelowSunDeg": 4
+  },
+  "rain": { "drops": 6000, "boxM": 40, "speed": 9 },
+  "turbulence": { "gustScale": 0.5, "stormScale": 2.2 }
+}

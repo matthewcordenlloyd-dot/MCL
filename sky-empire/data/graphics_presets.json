@@ -1,0 +1,70 @@
+{
+  "_doc": "Graphics presets. renderScale multiplies the physical screen resolution. shadowDistance is the size (m) of the real-time shadow area around the player. lodBias multiplies LOD switch distances.",
+  "default": "medium",
+  "presets": {
+    "low": {
+      "label": "Low",
+      "renderScale": 0.67,
+      "maxPixelRatio": 1,
+      "msaa": 0,
+      "shadows": false,
+      "shadowMapSize": 1024,
+      "shadowDistance": 0,
+      "anisotropy": 2,
+      "lodBias": 0.6,
+      "bloom": false,
+      "envMapSize": 128,
+      "liveryResolution": 2048,
+      "drawDistance": 30000,
+      "clouds": false
+    },
+    "medium": {
+      "label": "Medium",
+      "renderScale": 0.8,
+      "maxPixelRatio": 1.5,
+      "msaa": 2,
+      "shadows": true,
+      "shadowMapSize": 1024,
+      "shadowDistance": 70,
+      "anisotropy": 4,
+      "lodBias": 1,
+      "bloom": false,
+      "envMapSize": 256,
+      "liveryResolution": 4096,
+      "drawDistance": 50000,
+      "clouds": true
+    },
+    "high": {
+      "label": "High",
+      "renderScale": 1,
+      "maxPixelRatio": 2,
+      "msaa": 4,
+      "shadows": true,
+      "shadowMapSize": 2048,
+      "shadowDistance": 120,
+      "anisotropy": 8,
+      "lodBias": 1.5,
+      "bloom": false,
+      "envMapSize": 256,
+      "liveryResolution": 4096,
+      "drawDistance": 70000,
+      "clouds": true
+    },
+    "ultra": {
+      "label": "Ultra",
+      "renderScale": 1,
+      "maxPixelRatio": 2,
+      "msaa": 4,
+      "shadows": true,
+      "shadowMapSize": 4096,
+      "shadowDistance": 180,
+      "anisotropy": 16,
+      "lodBias": 2,
+      "bloom": true,
+      "envMapSize": 512,
+      "liveryResolution": 4096,
+      "drawDistance": 80000,
+      "clouds": true
+    }
+  }
+}

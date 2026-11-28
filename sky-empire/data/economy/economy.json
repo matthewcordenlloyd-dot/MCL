@@ -1,0 +1,189 @@
+{
+  "_doc": "Economy tuning (USD). Everything the business simulation charges, pays or predicts comes from here.",
+  "startDate": "2026-11-24T06:00:00Z",
+  "demand": {
+    "_doc": "Weekly one-way passengers = k * (mA*mB)^massExp * (tourismA*tourismB)^tourismExp / distanceKm^distExp (M9: 0.9, so long routes have realistically thinner demand), reduced linearly below shortHaulKm (rail/road competition). m = market size of each airport (population x income factor x airport share).",
+    "k": 200000,
+    "massExp": 0.85,
+    "distExp": 0.9,
+    "minDistanceKm": 150,
+    "businessShare": 0.14,
+    "elasticityEconomy": 1.35,
+    "elasticityBusiness": 0.6,
+    "competitorShareOfMarket": 1,
+    "unlistedLargeAirportMarket": 1.4,
+    "unlistedMediumAirportMarket": 0.3,
+    "gdpReference": 20000,
+    "gdpExp": 0.6,
+    "dailyNoise": 0.15,
+    "weekdayFactor": [
+      0.92,
+      1,
+      0.95,
+      0.98,
+      1.1,
+      1.12,
+      0.93
+    ],
+    "shortHaulKm": 500,
+    "tourismExp": 0.5,
+    "narrowbodyLongHaul": {
+      "_doc": "Passengers avoid narrowbodies on long flights: demand x (1 - maxPenalty) from fromKm to fromKm + overKm.",
+      "fromKm": 3000,
+      "overKm": 2000,
+      "maxPenalty": 0.25
+    }
+  },
+  "fares": {
+    "_doc": "Reference one-way economy fare = base + perKm * min(km, longHaulKm) + perKmLong * max(0, km - longHaulKm). Business = economy * businessMultiplier.",
+    "base": 55,
+    "perKm": 0.08,
+    "longHaulKm": 3000,
+    "perKmLong": 0.035,
+    "businessMultiplier": 3.2
+  },
+  "costs": {
+    "fuelUSDPerKg": 0.8,
+    "pilotPairPerBlockHr": 140,
+    "extraPilotOverHours": 9,
+    "cabinCrewPerBlockHr": 12,
+    "landingFeePerTonne": 8,
+    "paxFeePerPassenger": 12,
+    "navigationPerKmPerSqrtTonne": 0.11,
+    "handlingPerPassenger": 6,
+    "cateringPerPaxPerHour": 3,
+    "overheadPerMonth": 60000,
+    "overheadPerAircraftPerMonth": 4000,
+    "insurancePerMonthOfValue": 0.0004,
+    "depreciationPerMonth": 0.0035,
+    "taxiAndClimbHours": 0.55,
+    "maintAgeFactorPerYear": 0.03,
+    "_crewDoc": "Per-block-hour crew allowances (hotels, per diems). Salaries are paid monthly per staff department.",
+    "distributionShareOfRevenue": 0.06,
+    "adminShareOfRevenue": 0.07
+  },
+  "airports": {
+    "_doc": "Per-airport fee multipliers and slot rules. Slot-coordinated airports need one daily slot pair per daily round trip.",
+    "EGLL": {
+      "feeMultiplier": 3.5,
+      "slotPairUSD": 18000000
+    },
+    "EGKK": {
+      "feeMultiplier": 1.5,
+      "slotPairUSD": 1500000
+    },
+    "KJFK": {
+      "feeMultiplier": 2.2,
+      "slotPairUSD": 4000000
+    },
+    "EHAM": {
+      "feeMultiplier": 1.8,
+      "slotPairUSD": 3000000
+    },
+    "LFPG": {
+      "feeMultiplier": 1.8,
+      "slotPairUSD": 3000000
+    },
+    "OMDB": {
+      "feeMultiplier": 1.4,
+      "slotPairUSD": 2500000
+    },
+    "RJTT": {
+      "feeMultiplier": 2,
+      "slotPairUSD": 6000000
+    },
+    "defaultLarge": 1.2,
+    "defaultMedium": 0.9
+  },
+  "market": {
+    "newDepositShare": 0.2,
+    "leaseDepositMonths": 2,
+    "leaseMinMonths": 36,
+    "leaseEarlyReturnMonths": 3,
+    "leaseDeliveryDays": 21,
+    "usedDeliveryDays": 10,
+    "usedListings": 18,
+    "usedMaxAgeYears": 24,
+    "usedValuePerYear": 0.055,
+    "usedMinValueShare": 0.12,
+    "sellBelowValueShare": 0.92
+  },
+  "registrationPrefix": "G-",
+  "staff": {
+    "_doc": "Staff departments. Headcount needed is computed from the fleet and schedule; staffing and pay are set per department. Morale moves monthly toward a target driven by pay and workload.",
+    "departments": {
+      "pilots": {
+        "label": "Pilots",
+        "perNarrowbody": 6,
+        "perWidebody": 12,
+        "perTurboprop": 4,
+        "salaryMonthUSD": 12000
+      },
+      "cabin": {
+        "label": "Cabin crew",
+        "perCabinCrewSeat": 4,
+        "salaryMonthUSD": 3000
+      },
+      "engineers": {
+        "label": "Engineers",
+        "perAircraft": 3,
+        "salaryMonthUSD": 5500
+      },
+      "ground": {
+        "label": "Ground staff",
+        "perWeeklyDeparture": 0.25,
+        "salaryMonthUSD": 2800
+      },
+      "hq": {
+        "label": "Head office",
+        "base": 12,
+        "perAircraft": 1,
+        "salaryMonthUSD": 6500
+      }
+    },
+    "moralePayWeight": 0.9,
+    "moraleStaffingWeight": 0.6,
+    "moraleMonthlyBlend": 0.3
+  },
+  "fuel": {
+    "meanUSDPerKg": 0.8,
+    "reversionPerYear": 0.6,
+    "volatilityPerYear": 0.28,
+    "min": 0.4,
+    "max": 2.2
+  },
+  "operations": {
+    "baseDelayProb": 0.07,
+    "delayMinutesMean": 35,
+    "longDelayShare": 0.08,
+    "compensationUSDPerPax": 350,
+    "claimRate": 0.35,
+    "understaffDelayWeight": 0.5
+  },
+  "reputation": {
+    "start": 50,
+    "monthlyBlend": 0.25,
+    "weights": {
+      "punctuality": 0.3,
+      "service": 0.25,
+      "comfort": 0.15,
+      "value": 0.2,
+      "safety": 0.1
+    }
+  },
+  "share": {
+    "_doc": "Market share between carriers on a route: weight = seats x exp(qualityWeight*(quality-0.5)) x fareRatio^-fareElasticity.",
+    "qualityWeight": 0.8,
+    "fareElasticity": 1.35,
+    "othersMinShareOfCompetition": 0.2
+  },
+  "playerFlight": {
+    "bonusButterFpm": -150,
+    "bonusButter": 0.08,
+    "bonusGoodFpm": -300,
+    "bonusGood": 0.03,
+    "hardFpm": -600,
+    "hardReputation": -1.5,
+    "butterReputation": 0.5
+  }
+}

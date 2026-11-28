@@ -1,0 +1,122 @@
+{
+  "_doc": "M6 tycoon depth: loans, shares, takeovers, alliances, assets, cargo, charters, strikes. Money in USD.",
+  "finance": {
+    "baseRate": 0.045,
+    "_ratings": "name, spread over the base rate, maximum debt / EBITDA for that grade",
+    "ratings": [["AAA", 0.004, 1.0], ["AA", 0.007, 1.8], ["A", 0.012, 2.6], ["BBB", 0.02, 3.5], ["BB", 0.035, 4.5], ["B", 0.055, 6.0], ["CCC", 0.09, 99]],
+    "capacityEbitdaMultiple": { "AAA": 5, "AA": 4.5, "A": 4, "BBB": 3.5, "BB": 3, "B": 2, "CCC": 0.5 },
+    "assetAdvance": 0.65,
+    "minCapacityUSD": 15000000,
+    "terms": [12, 36, 60, 120],
+    "creditLineShareOfCapacity": 0.25,
+    "creditLineMinUSD": 5000000,
+    "creditLineExtraSpread": 0.01,
+    "covenantMaxDebtToEbitda": 6,
+    "breachPenaltySpread": 0.02,
+    "saleLeasebackPriceShare": 1.0,
+    "saleLeasebackLeaseFactor": 1.1
+  },
+  "equity": {
+    "foundingShares": 10000000,
+    "ipoMinAnnualRevenueUSD": 150000000,
+    "ipoDiscount": 0.9,
+    "ipoFees": 0.04,
+    "minFloat": 0.1,
+    "maxFloat": 0.49,
+    "ebitdaMultiple": 7,
+    "revenueMultipleFloor": 0.25,
+    "dailyVolatility": 0.016,
+    "reversionPerDay": 0.05,
+    "boardDemandEveryMonths": 6,
+    "boardBlockShareOfValue": 0.1,
+    "personalSaleDiscount": 0.97,
+    "maxSecondaryShare": 0.2
+  },
+  "rivals": {
+    "loadFactor": 0.8,
+    "fareMixFactor": 1.12,
+    "valueRevenueMultiple": 0.55,
+    "margins": { "legacy": 0.05, "longhaul": 0.05, "lcc": 0.08, "ulcc": 0.1, "leisure": 0.04, "gulf": 0.07, "regional": 0.03 },
+    "stakeDividendPayout": 0.4,
+    "disclosure": [0.05, 0.1, 0.25],
+    "stakePriceImpact": 0.12,
+    "bidDays": 14,
+    "regulatorRemedyOverlap": 3,
+    "regulatorBlockOverlap": 12,
+    "mergeSlotsPerHub": 10,
+    "mergeMoraleHit": 0.12
+  },
+  "alliance": {
+    "minReputation": 55,
+    "minRoutes": 8,
+    "maxMembers": 12,
+    "demandBoost": 0.08,
+    "codeshareCapacityWeight": 0.5,
+    "comfortBonus": 0.03,
+    "inviteCooldownDays": 90,
+    "refusesModels": ["lcc", "ulcc"]
+  },
+  "connecting": { "_doc": "Connecting traffic through your base: demand boost per sqrt(routes at the base).", "perSqrtRoute": 0.035, "max": 0.3 },
+  "lounges": [
+    { "label": "Lounge", "buildUSD": 2500000, "monthUSD": 50000, "jBoost": 0.06, "feePerPax": 1.5, "comfort": 0.02 },
+    { "label": "Premium lounge", "buildUSD": 4000000, "monthUSD": 120000, "jBoost": 0.12, "feePerPax": 2.5, "comfort": 0.04 },
+    { "label": "Flagship lounge", "buildUSD": 8000000, "monthUSD": 250000, "jBoost": 0.18, "feePerPax": 4, "comfort": 0.06 }
+  ],
+  "hotels": {
+    "sizes": [
+      { "label": "Airport hotel (150 rooms)", "rooms": 150, "buildUSD": 22000000 },
+      { "label": "Resort-size hotel (400 rooms)", "rooms": 400, "buildUSD": 55000000 }
+    ],
+    "adrBaseUSD": 80,
+    "adrPerSqrtMarket": 12,
+    "costShare": 0.62,
+    "fixedPerRoomMonthUSD": 250,
+    "resaleShare": 0.85
+  },
+  "airports": {
+    "annualPaxPerMarket": 5000000,
+    "valuePerAnnualPaxUSD": 60,
+    "minValueUSD": 50000000,
+    "yieldPerYear": 0.06,
+    "controlFeeDiscount": 0.3,
+    "controlSlots": 20,
+    "resaleShare": 0.97
+  },
+  "cargo": {
+    "bellyTonnes": { "turboprop": 0.5, "regional": 1, "narrowbody": 3, "widebody": 16, "jumbo": 20, "business jet": 0, "helicopter": 0, "VIP airliner": 0 },
+    "bellyFill": [0.35, 0.75],
+    "ratePerTonneKm": 0.32,
+    "longHaulKm": 3000,
+    "longHaulFactor": 0.72,
+    "minRatePerKg": 0.4,
+    "handlingPerTonne": 60,
+    "tonnesPerWeeklyPax": 0.035,
+    "elasticity": 0.8
+  },
+  "charter": {
+    "offersPerMonth": 6,
+    "maxOffers": 8,
+    "expiryDays": [5, 14],
+    "kinds": {
+      "sports": { "label": "Sports team", "clients": ["a Premier League football club", "a national rugby team", "a motorsport team", "an Olympic squad", "a cricket touring side"], "pax": [40, 90], "km": [500, 6000], "stayDays": [2, 4], "margin": [0.5, 0.9] },
+      "tour": { "label": "Holiday charter", "clients": ["a tour operator", "a cruise line", "a ski holiday company", "a festival organiser"], "pax": [130, 165], "km": [800, 4500], "stayDays": [6, 8], "margin": [0.25, 0.45], "tourism": 1.4 },
+      "government": { "label": "Government", "clients": ["a government trade delegation", "a peacekeeping rotation", "a royal household", "an election observer mission"], "pax": [30, 80], "km": [2000, 9000], "stayDays": [2, 4], "margin": [0.6, 1.0] },
+      "vip": { "label": "VIP", "clients": ["a tech billionaire", "a pop star's world tour", "an oil family", "a film studio", "a royal wedding party"], "pax": [6, 14], "km": [1000, 11000], "stayDays": [3, 6], "margin": [1.5, 3.0], "needsVip": true },
+      "acmi": { "label": "ACMI wet lease", "pax": [150, 150], "months": [2, 6], "payLeaseFactor": 1.9 }
+    },
+    "selfFlyBonus": 0.1,
+    "dailyRateLeaseFactor": 2.5
+  },
+  "strikes": {
+    "moraleThreshold": 0.32,
+    "satisfiedMorale": 0.45,
+    "warningDays": 14,
+    "ballotDays": 7,
+    "strikeDays": [3, 7],
+    "cancelShare": { "pilots": 0.85, "cabin": 0.7, "ground": 0.35, "engineers": 0.15, "hq": 0 },
+    "delayProb": { "pilots": 0.1, "cabin": 0.15, "ground": 0.5, "engineers": 0.25, "hq": 0.05 },
+    "settlePayRise": 0.08,
+    "settleMorale": 0.12,
+    "afterStrikeMorale": 0.08
+  }
+}

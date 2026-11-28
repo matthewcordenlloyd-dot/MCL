@@ -1,0 +1,51 @@
+{
+  "icao": "EGKK",
+  "iata": "LGW",
+  "name": "London Gatwick",
+  "arp": { "lat": 51.14945, "lon": -0.18505, "elevationM": 62 },
+  "frameRotationDeg": 12.2,
+  "frame": "Airport frame: metres from the runway centre, x along runway 08R->26L (true heading 077.8), z = 90 degrees right of that, y up. The game rotates the frame by frameRotationDeg onto the real heading.",
+  "note": "Gatwick-inspired M3 layout: main runway 08R/26L, a parallel taxiway, one terminal block north of the runway with its apron. Not a survey-accurate layout.",
+  "runways": [
+    { "id": "08R/26L", "ends": ["08R", "26L"], "center": [0, 0], "headingTrueDeg": 90, "lengthM": 3316, "widthM": 45, "shoulderM": 7.5, "surface": "asphalt" }
+  ],
+  "taxiways": [
+    { "id": "J", "from": [-1720, -200], "to": [1720, -200], "widthM": 23 },
+    { "id": "JW", "from": [-1680, -200], "to": [-1680, -30], "widthM": 23 },
+    { "id": "JE", "from": [1680, -200], "to": [1680, -30], "widthM": 23 },
+    { "id": "AP", "from": [-400, -450], "to": [-400, -200], "widthM": 25 }
+  ],
+  "apron": { "min": [-580, -650], "max": [-220, -450] },
+  "terminal": {
+    "id": "NT",
+    "model": "models/egkk_terminal.glb",
+    "lightmap": "models/egkk_terminal_lm.png",
+    "center": [-400, -680],
+    "rotationDeg": 0,
+    "sizeM": [300, 60, 20],
+    "lightmapScale": 2.0,
+    "note": "Gatwick-inspired original design built with the shared terminal generator."
+  },
+  "stands": [
+    { "id": "101", "nose": [-520, -636], "headingDeg": 0 },
+    { "id": "102", "nose": [-460, -636], "headingDeg": 0 },
+    { "id": "103", "nose": [-400, -636], "headingDeg": 0 },
+    { "id": "104", "nose": [-340, -636], "headingDeg": 0 },
+    { "id": "105", "nose": [-280, -636], "headingDeg": 0 }
+  ],
+  "playerStand": "103",
+  "reservedStands": ["101", "103"],
+  "jetBridgeRotunda": [-400, -644],
+  "empire": { "_doc": "M7: HQ footprint and home estate plot in the airport frame (x along the runway, z north is negative).", "hq": { "min": [-170, -870], "max": [-50, -810] }, "home": { "center": [-400, -1290], "size": [220, 220] }, "driveway": [[-400, -830], [-400, -1180]] },
+  "landside": { "roadZ": -752, "roadWidthM": 18, "carParkMin": [-550, -830], "carParkMax": [-250, -770] },
+  "spawnPoints": {
+    "apron": { "pos": [-418, 0, -596], "yawDeg": 15, "label": "Gatwick apron, stand 103" },
+    "terminal": { "pos": [-400, 0, -685], "yawDeg": 180, "label": "Gatwick terminal" },
+    "landside": { "pos": [-400, 0, -742], "yawDeg": 0, "label": "Gatwick forecourt" },
+    "runway": { "pos": [-1600, 0, 0], "yawDeg": 90, "label": "Gatwick runway 08R" },
+    "hq": { "pos": [-155, 0, -800], "yawDeg": 0, "label": "Your headquarters" },
+    "home": { "pos": [-404, 0, -1250], "yawDeg": 0, "label": "Home" }
+  },
+  "mask": { "min": [-2300, -1550], "max": [2300, 600], "blendM": 400 },
+  "bakeSun": { "azimuthDeg": 200, "elevationDeg": 42, "strength": 3.5, "skyStrength": 0.9 }
+}

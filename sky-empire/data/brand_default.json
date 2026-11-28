@@ -1,0 +1,8 @@
+{
+  "_doc": "Default airline brand used until the new-game screen (M3) and livery editor (M5) exist.",
+  "name": "Sky Empire",
+  "code": "SE",
+  "callsign": "SKY EMPIRE",
+  "colors": { "primary": "#0B2545", "accent": "#E0A526", "secondary": "#FFFFFF", "window": "#1B2430" },
+  "registrations": ["G-SKYA", "G-SKYB", "G-SKYC", "G-SKYD", "G-SKYE"]
+}

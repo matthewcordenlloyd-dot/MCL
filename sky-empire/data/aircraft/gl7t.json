@@ -1,0 +1,78 @@
+{
+  "id": "gl7t",
+  "name": "Bombardier Global 7500",
+  "manufacturer": "Bombardier",
+  "category": "business jet",
+  "_doc": "Long-range business jet you can fly yourself (M10). Same conventions as a320neo.json: s = metres from the nose, model origin on the ground under the main gear, nose towards three.js -Z.",
+  "dimensions": { "length": 33.8, "span": 31.7, "height": 8.2, "fuselageWidth": 2.69, "fuselageHeight": 2.69, "wheelbase": 14.3, "track": 4.2 },
+  "model": {
+    "file": "models/gl7t.glb",
+    "rootName": "GL7T",
+    "noseY": 17.2,
+    "centerlineHeight": 2.15,
+    "cabinFloorBelowCenterline": 0.6,
+    "lodDistances": [0, 110, 420],
+    "uv": { "type": "cylindrical", "length": 33.8 },
+    "profile": {
+      "_doc": "Fuselage shape: nose [s, radius factor, centre offset] and tail [s, radius factor].",
+      "nose": [[0, 0.03, -0.42], [0.2, 0.28, -0.4], [0.55, 0.5, -0.33], [1.0, 0.67, -0.25], [1.6, 0.8, -0.17], [2.3, 0.89, -0.1], [3.1, 0.95, -0.05], [4.0, 0.985, -0.015], [4.8, 1, 0]],
+      "tail": [[23.0, 1], [25.0, 0.96], [27.0, 0.88], [29.0, 0.76], [31.0, 0.58], [32.5, 0.4], [33.4, 0.22], [33.8, 0.1]],
+      "tailCentreRise": 0.9
+    },
+    "interior": {
+      "rootName": "GL7T_Interior",
+      "lit": true,
+      "cockpitBulkheadS": 4.2,
+      "aftBulkheadS": 23.2,
+      "captainSeat": [-0.45, 3.15],
+      "standS": 3.75,
+      "pedestalS": 3.05,
+      "panelS": 2.56
+    },
+    "lights": { "wingtip": [15.75, 2.35, 6.9], "tail": [0, 7.95, 15.6], "beaconTop": [0, 3.55, -6], "beaconBottom": [0, 0.75, -4] }
+  },
+  "livery": {
+    "windows": { "firstS": 6.1, "pitch": 0.98, "count": 16, "gaps": [], "width": 0.36, "height": 0.46, "centerAboveCenterline": 0.12 },
+    "overwingExits": [],
+    "doors": [{ "id": "main", "s": 5.0, "width": 0.9, "height": 1.75, "sillBelowCenterline": 0.6, "sides": ["L"] }],
+    "cargoDoors": [{ "s": 22.4, "width": 0.8, "height": 0.7, "side": "L" }],
+    "cockpit": { "panes": [[1.75, 2.35, 1.85, 3.115], [2.4, 2.95, 1.8, 2.45], [3.0, 3.35, 1.85, 2.3]] }
+  },
+  "cabin": {
+    "maxSeats": 19,
+    "cabinWidthM": 2.44,
+    "cabinLengthM": 16.6,
+    "layout": { "_doc": "VIP cabin furniture is modelled in Blender (no instanced rows).", "firstRowS": 6.0, "pitchM": 1, "rows": 0, "exitRows": [], "exitExtraM": 0, "seatsPerSide": 0, "seatWidthM": 0.6, "aisleM": 0.6, "floorBelowCenterline": 0.6 }
+  },
+  "flight": {
+    "massEmptyKg": 31800,
+    "defaultFuelKg": 9000,
+    "defaultPayloadKg": 1200,
+    "inertiaKgM2": { "pitch": 950000, "yaw": 1600000, "roll": 620000 },
+    "wingAreaM2": 94.8,
+    "spanM": 31.7,
+    "macM": 3.3,
+    "aero": { "CL0": 0.25, "CLalpha": 5.4, "alphaStallDeg": 15.5, "CLmaxClean": 1.5, "postStallCLDrop": 0.55, "CD0": 0.018, "k": 0.04, "CDgear": 0.02, "CDspoilers": 0.035, "CYbeta": -0.7, "Cm0": 0.02, "CmAlpha": -1.2, "CmQ": -20, "CmElevator": -1.4, "CmFlapPerUnit": -0.05, "ClBeta": -0.09, "ClP": -0.48, "ClR": 0.12, "ClAileron": 0.052, "ClSpoilerRoll": 0.08, "CnBeta": 0.13, "CnR": -0.28, "CnRudder": -0.11, "CnAileronAdverse": -0.008, "elevatorMaxDeg": 25, "aileronMaxDeg": 25, "rudderMaxDeg": 30, "groundEffectFactor": 0.25 },
+    "flaps": [
+      { "name": "UP", "dCL": 0, "dCD": 0, "dAlphaStallDeg": 0, "vmaxKt": 340 },
+      { "name": "6", "dCL": 0.22, "dCD": 0.01, "dAlphaStallDeg": 1.5, "vmaxKt": 250 },
+      { "name": "16", "dCL": 0.45, "dCD": 0.022, "dAlphaStallDeg": 2.5, "vmaxKt": 210 },
+      { "name": "30", "dCL": 0.72, "dCD": 0.045, "dAlphaStallDeg": 3.5, "vmaxKt": 180 }
+    ],
+    "engines": { "count": 2, "staticThrustN": 84000, "idleFraction": 0.05, "reverseFraction": 0.3, "spoolSeconds": 3.0, "fuelKgPerSecPerKN": 0.0105, "x": [-2.3, 2.3] },
+    "gear": {
+      "retractSeconds": 8,
+      "points": [
+        { "id": "nose", "pos": [0, 0, -14.3], "k": 320000, "c": 36000, "steer": true, "brake": false },
+        { "id": "mainL", "pos": [-2.1, 0, 0], "k": 1300000, "c": 150000, "steer": false, "brake": true },
+        { "id": "mainR", "pos": [2.1, 0, 0], "k": 1300000, "c": 150000, "steer": false, "brake": true }
+      ],
+      "rollingFriction": 0.015, "brakeFriction": 0.55, "lateralFriction": 0.75, "nosewheelMaxDegLowSpeed": 70, "nosewheelMaxDegHighSpeed": 7
+    },
+    "structure": { "points": [[0, 1.35, -17.1], [0, 0.85, 2], [0, 2.4, 16.3], [-15.85, 2.3, 6.9], [15.85, 2.3, 6.9], [-2.3, 2.05, 10.3], [2.3, 2.05, 10.3]] },
+    "cockpitEye": [-0.45, 2.63, -13.85],
+    "arcade": { "maxPitchRateDeg": 10, "maxRollRateDeg": 32, "maxBankDeg": 45, "spoolSeconds": 1.3, "autoCoordinate": true },
+    "normalLaw": { "maxRollRateDeg": 17, "bankHoldLimitDeg": 33, "maxBankDeg": 67, "nzMax": 2.5, "nzMin": -1, "alphaProtDeg": 13, "alphaMaxDeg": 15 },
+    "cgModel": [0, 2.3, -1.4]
+  }
+}

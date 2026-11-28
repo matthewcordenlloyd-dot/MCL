@@ -1,0 +1,65 @@
+{
+  "_doc": "M7 personal empire. Your own money (personal cash) is separate from the airline's. Values in USD. Car and yacht names are generic on purpose (no real brands).",
+  "ceoSalary": { "defaultUSDPerYear": 500000, "maxUSDPerYear": 5000000, "boardFrownsOverUSD": 2000000 },
+  "cars": [
+    { "id": "saloon", "name": "Electric executive saloon", "style": "saloon", "priceUSD": 95000, "upkeepMonthUSD": 600, "topKmh": 250, "accel": 3.8, "depreciation": 0.12 },
+    { "id": "suv", "name": "Luxury off-roader", "style": "suv", "priceUSD": 180000, "upkeepMonthUSD": 900, "topKmh": 240, "accel": 4.6, "depreciation": 0.1 },
+    { "id": "gt", "name": "V12 grand tourer", "style": "gt", "priceUSD": 320000, "upkeepMonthUSD": 1800, "topKmh": 330, "accel": 3.3, "depreciation": 0.09 },
+    { "id": "roadster", "name": "Mid-engine roadster", "style": "roadster", "priceUSD": 450000, "upkeepMonthUSD": 2400, "topKmh": 340, "accel": 2.9, "depreciation": 0.08 },
+    { "id": "hyper", "name": "Hybrid hypercar", "style": "hyper", "priceUSD": 3200000, "upkeepMonthUSD": 9000, "topKmh": 410, "accel": 2.3, "depreciation": 0.02 },
+    { "id": "classic", "name": "1960s classic GT", "style": "classic", "priceUSD": 1800000, "upkeepMonthUSD": 3500, "topKmh": 240, "accel": 6.5, "depreciation": -0.05 }
+  ],
+  "carColours": ["#c0392b", "#111318", "#f2f2f0", "#1f3a8a", "#e0a526", "#2e7d4f", "#8a8f98", "#5b2a86"],
+  "aircraft": {
+    "_doc": "Personal aircraft use the airline catalogue's types and prices. Upkeep (crew, hangar, maintenance) is a share of the price per year.",
+    "types": ["h145", "aw139", "e55p", "cj4", "gl7t", "acj320"],
+    "upkeepShareYear": 0.06,
+    "depreciation": 0.06,
+    "fuelUSDPerHour": { "helicopter": 400, "business jet": 1600, "VIP airliner": 6000 }
+  },
+  "yachts": [
+    { "id": "y30", "name": "30 m motor yacht", "priceUSD": 9000000, "upkeepShareYear": 0.1, "depreciation": 0.07 },
+    { "id": "y60", "name": "60 m superyacht", "priceUSD": 75000000, "upkeepShareYear": 0.1, "depreciation": 0.06 },
+    { "id": "y110", "name": "110 m gigayacht with helipad", "priceUSD": 420000000, "upkeepShareYear": 0.1, "depreciation": 0.05 }
+  ],
+  "properties": [
+    { "id": "london", "name": "Townhouse in Mayfair, London", "icao": "EGLC", "priceUSD": 28000000, "upkeepShareYear": 0.015, "appreciation": 0.04 },
+    { "id": "monaco", "name": "Penthouse in Monte Carlo", "icao": "LFMN", "priceUSD": 65000000, "upkeepShareYear": 0.012, "appreciation": 0.05 },
+    { "id": "malibu", "name": "Beach villa in Malibu", "icao": "KLAX", "priceUSD": 48000000, "upkeepShareYear": 0.015, "appreciation": 0.045 },
+    { "id": "capetown", "name": "Wine estate near Cape Town", "icao": "FACT", "priceUSD": 14000000, "upkeepShareYear": 0.02, "appreciation": 0.04 },
+    { "id": "alps", "name": "Ski chalet in the Swiss Alps", "icao": "LSGG", "priceUSD": 32000000, "upkeepShareYear": 0.015, "appreciation": 0.035 },
+    { "id": "nyc", "name": "Duplex on Fifth Avenue, New York", "icao": "KJFK", "priceUSD": 85000000, "upkeepShareYear": 0.012, "appreciation": 0.04 },
+    { "id": "dubai", "name": "Palm villa in Dubai", "icao": "OMDB", "priceUSD": 36000000, "upkeepShareYear": 0.015, "appreciation": 0.05 },
+    { "id": "island", "name": "Private island in the Caribbean", "icao": "TNCM", "priceUSD": 120000000, "upkeepShareYear": 0.03, "appreciation": 0.03 }
+  ],
+  "home": [
+    { "name": "Cottage", "priceUSD": 0, "upkeepMonthUSD": 2000, "valueUSD": 900000 },
+    { "name": "Modern villa", "priceUSD": 8000000, "upkeepMonthUSD": 15000, "valueUSD": 8000000 },
+    { "name": "Country estate", "priceUSD": 35000000, "upkeepMonthUSD": 60000, "valueUSD": 35000000 },
+    { "name": "Mega-mansion", "priceUSD": 120000000, "upkeepMonthUSD": 200000, "valueUSD": 120000000 }
+  ],
+  "richList": {
+    "growthPerYear": 0.05,
+    "volatilityPerMonth": 0.025,
+    "_doc": "Fictional people. Fortunes in USD at the start of the game.",
+    "people": [
+      ["Aurelio Vantengo", "Retail and luxury", 238e9], ["Mira Okonkwo-Hale", "Cloud computing", 205e9], ["Lars Brennvik", "Electric vehicles", 182e9],
+      ["Celeste Marrowfield", "Search and ads", 160e9], ["Tomas Ilyrian", "Social media", 143e9], ["Henrike Dahlgaard", "Software", 121e9],
+      ["Rafael Quintanar", "Telecoms", 104e9], ["Priya Venkataraman", "Semiconductors", 96e9], ["Gideon Ashcombe", "Investments", 88e9],
+      ["Sofia Carvalheira", "Fashion", 79e9], ["Wen Laiyuan", "E-commerce", 71e9], ["Desmond Okafor-Reid", "Mining", 63e9],
+      ["Ingrid Solberg-Ness", "Shipping", 57e9], ["Matteo Ferraviglia", "Chocolate and coffee", 51e9], ["Yusuf Al-Kharrazi", "Energy", 47e9],
+      ["Beatrix Lindqvist", "Cosmetics", 42e9], ["Kenji Morisawa", "Robotics", 38e9], ["Adaeze Nwankwo", "Cement", 34e9],
+      ["Harlan Whitcombe", "Hedge funds", 31e9], ["Elena Volkonskaya", "Steel", 28e9], ["Dominic Arceneaux", "Media", 25e9],
+      ["Linnea Fjellstrom", "Gaming", 22e9], ["Arjun Malhotra-Sethi", "Pharmaceuticals", 20e9], ["Claudette Moreau-Vigne", "Wine and spirits", 18e9],
+      ["Oskar Halvorsen", "Payments", 16e9], ["Nadia Rahimova", "Real estate", 14.5e9], ["Benedict Okoro-Lane", "Private equity", 13e9],
+      ["Isabela Duarte", "Agriculture", 11.8e9], ["Callum Strathearn", "Whisky and hotels", 10.5e9], ["Mei-Lin Sato", "Streaming", 9.6e9],
+      ["Rupert Ellingham", "Insurance", 8.8e9], ["Zara Abernethy", "Fintech", 8e9], ["Florian Achterberg", "Logistics", 7.2e9],
+      ["Amara Delacroix", "Biotech", 6.5e9], ["Ivo Petrakis", "Ferries and ports", 5.9e9], ["Sunniva Breivik", "Salmon farming", 5.3e9],
+      ["Leopold Fairweather", "Department stores", 4.8e9], ["Catalina Ibarra", "Beverages", 4.3e9], ["Hugo Valcourt", "Watches", 3.9e9],
+      ["Tamsin Cordell", "Fashion e-commerce", 3.5e9], ["Raymond Achebe-Grant", "Construction", 3.1e9], ["Saskia van Dorne", "Flowers", 2.8e9],
+      ["Emil Rautavaara", "Mobile games", 2.5e9], ["Lucia Benedetti", "Eyewear", 2.2e9], ["Ronan McAllister", "Data centres", 2e9],
+      ["Annika Sorensen", "Toys", 1.8e9], ["Bastian Kruger", "Sports betting", 1.6e9], ["Delphine Arnaud", "Perfume", 1.4e9],
+      ["Mateus Rocha", "Football clubs", 1.25e9], ["Greta Lundholm", "Furniture", 1.1e9]
+    ]
+  }
+}

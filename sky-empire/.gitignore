@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env.local
+.env.*.local
+*.blend1
+blender/_cache/
+.vite/
+public/draco/
+__pycache__/
+data/raw/

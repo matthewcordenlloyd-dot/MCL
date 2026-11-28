@@ -1,0 +1,231 @@
+{
+  "_doc": "Default bindings. Keyboard uses KeyboardEvent.code values; gamepad uses the W3C standard mapping (0 A/Cross, 1 B/Circle, 2 X/Square, 3 Y/Triangle, 4 LB, 5 RB, 6 LT, 7 RT, 8 View/Share, 9 Menu/Options, 10 L3, 11 R3, 12-15 D-pad up/down/left/right). Players can rebind in the menu; overrides are saved in the browser.",
+  "walking": {
+    "forward": [
+      "KeyW",
+      "ArrowUp"
+    ],
+    "back": [
+      "KeyS",
+      "ArrowDown"
+    ],
+    "left": [
+      "KeyA",
+      "ArrowLeft"
+    ],
+    "right": [
+      "KeyD",
+      "ArrowRight"
+    ],
+    "run": [
+      "ShiftLeft",
+      "ShiftRight"
+    ],
+    "jump": [
+      "Space"
+    ],
+    "toggleView": [
+      "KeyV"
+    ],
+    "interact": [
+      "KeyE"
+    ]
+  },
+  "flying": {
+    "pitchDown": [
+      "KeyW",
+      "ArrowUp"
+    ],
+    "pitchUp": [
+      "KeyS",
+      "ArrowDown"
+    ],
+    "rollLeft": [
+      "KeyA",
+      "ArrowLeft"
+    ],
+    "rollRight": [
+      "KeyD",
+      "ArrowRight"
+    ],
+    "yawLeft": [
+      "KeyQ"
+    ],
+    "yawRight": [
+      "KeyE"
+    ],
+    "throttleUp": [
+      "ShiftLeft",
+      "PageUp",
+      "Equal",
+      "NumpadAdd"
+    ],
+    "throttleDown": [
+      "ControlLeft",
+      "PageDown",
+      "Minus",
+      "NumpadSubtract"
+    ],
+    "throttleIdle": [
+      "KeyX"
+    ],
+    "throttleToga": [
+      "KeyT"
+    ],
+    "reverse": [
+      "KeyR"
+    ],
+    "brakes": [
+      "Space",
+      "KeyB"
+    ],
+    "parkingBrake": [
+      "KeyN"
+    ],
+    "gear": [
+      "KeyG"
+    ],
+    "flapsDown": [
+      "BracketRight"
+    ],
+    "flapsUp": [
+      "BracketLeft"
+    ],
+    "spoilers": [
+      "Slash"
+    ],
+    "autopilot": [
+      "KeyZ"
+    ],
+    "autothrust": [
+      "KeyU"
+    ],
+    "hdgDown": [
+      "Comma"
+    ],
+    "hdgUp": [
+      "Period"
+    ],
+    "altDown": [
+      "Semicolon"
+    ],
+    "altUp": [
+      "Quote"
+    ],
+    "camera": [
+      "KeyC"
+    ],
+    "hud": [
+      "KeyH"
+    ],
+    "mouseYoke": [
+      "KeyM"
+    ],
+    "pushback": [
+      "KeyP"
+    ],
+    "leaveSeat": [
+      "KeyF"
+    ],
+    "skip": [
+      "KeyK"
+    ]
+  },
+  "global": {
+    "toggleStats": [
+      "F3"
+    ],
+    "teleportApron": [
+      "Digit1"
+    ],
+    "teleportTerminal": [
+      "Digit2"
+    ],
+    "teleportLandside": [
+      "Digit3"
+    ],
+    "teleportRunway": [
+      "Digit4"
+    ],
+    "cyclePreset": [
+      "F9"
+    ],
+    "ops": [
+      "Tab"
+    ]
+  },
+  "gamepad": {
+    "walking": {
+      "jump": [
+        0
+      ],
+      "run": [
+        1
+      ],
+      "interact": [
+        2
+      ],
+      "toggleView": [
+        3
+      ],
+      "menu": [
+        9
+      ]
+    },
+    "flying": {
+      "leaveSeat": [
+        0
+      ],
+      "brakes": [
+        1
+      ],
+      "gear": [
+        2
+      ],
+      "camera": [
+        3
+      ],
+      "yawLeft": [
+        4
+      ],
+      "yawRight": [
+        5
+      ],
+      "throttleDown": [
+        6
+      ],
+      "throttleUp": [
+        7
+      ],
+      "hud": [
+        8
+      ],
+      "menu": [
+        9
+      ],
+      "autopilot": [
+        10
+      ],
+      "parkingBrake": [
+        11
+      ],
+      "flapsUp": [
+        12
+      ],
+      "flapsDown": [
+        13
+      ],
+      "pushback": [
+        14
+      ],
+      "autothrust": [
+        15
+      ]
+    },
+    "deadzone": 0.12
+  },
+  "mouse": {
+    "sensitivity": 0.0022,
+    "invertY": false
+  }
+}

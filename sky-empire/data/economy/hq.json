@@ -1,0 +1,22 @@
+{
+  "_doc": "M7 headquarters. Each department has 3 levels: cost (company cash), monthly running cost, and an effect per level. A department level cannot exceed the HQ building tier + 1.",
+  "tiers": [
+    { "name": "Rented office floor", "priceUSD": 0, "monthUSD": 40000, "floors": 4 },
+    { "name": "Own headquarters building", "priceUSD": 40000000, "monthUSD": 150000, "floors": 8 },
+    { "name": "Landmark tower", "priceUSD": 250000000, "monthUSD": 600000, "floors": 32 }
+  ],
+  "levelCostUSD": [2000000, 6000000, 15000000],
+  "levelMonthUSD": [40000, 100000, 220000],
+  "departments": {
+    "ops": { "name": "Operations Control Centre", "room": "Ops room with a live wall map of your flights", "effect": "Delays −12% and cancellations −15% per level", "perLevel": { "delay": 0.12, "cancel": 0.15 } },
+    "revenue": { "name": "Revenue Management", "room": "Analyst floor with fare dashboards", "effect": "Fare optimiser on the Routes tab; ticket revenue +2% per level", "perLevel": { "yield": 0.02 } },
+    "network": { "name": "Network Planning", "room": "Planning room with a route-map table", "effect": "Route opportunity reports (5 / 10 / 20 ideas)", "perLevel": { "ideas": [5, 10, 20] } },
+    "training": { "name": "Training Centre", "room": "Classrooms and a full-motion simulator", "effect": "Staff morale +3% and crew costs −3% per level", "perLevel": { "morale": 0.03, "crew": 0.03 } },
+    "maintenance": { "name": "Maintenance Base", "room": "Engineering office", "effect": "Maintenance costs −6% per level", "perLevel": { "maint": 0.06 } },
+    "pr": { "name": "PR & Communications", "room": "Press room", "effect": "Bad news hurts 25% less per level; reputation +1.5 per level", "perLevel": { "soften": 0.25, "reputation": 1.5 } },
+    "cargo": { "name": "Cargo Division", "room": "Cargo control desk", "effect": "Belly cargo fill +8% and freight demand +10% per level", "perLevel": { "belly": 0.08, "freight": 0.1 } },
+    "charter": { "name": "Charter & VIP Sales", "room": "Client lounge", "effect": "40% more charter requests and +10% charter margins per level", "perLevel": { "offers": 0.4, "margin": 0.1 } },
+    "ir": { "name": "Investor Relations", "room": "Boardroom", "effect": "Smaller share-price swings (−25% per level) and a better valuation (+3% per level)", "perLevel": { "volatility": 0.25, "sentiment": 0.03 } },
+    "legal": { "name": "Legal & Regulatory", "room": "Legal office", "effect": "Regulators block 30% less often and boards accept bids more readily, per level", "perLevel": { "block": 0.3, "bid": 0.05 } }
+  }
+}
